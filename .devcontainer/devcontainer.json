@@ -1,7 +1,9 @@
 {
   "name": "dotnet-polyglot-csharp",
   "image": "mcr.microsoft.com/devcontainers/dotnet:9.0",
-
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
