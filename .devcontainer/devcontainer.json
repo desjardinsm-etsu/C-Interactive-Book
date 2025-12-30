@@ -1,0 +1,31 @@
+{
+  "name": "dotnet-polyglot-csharp",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.dotnet-interactive-vscode",
+        "ms-vscode.PowerShell",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Dark+ (default)",
+
+        "editor.semanticHighlighting.enabled": true,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": true,
+
+        "editor.tokenColorCustomizations": {},
+        "workbench.colorCustomizations": {},
+
+        "files.defaultLanguage": "csharp",
+        "notebook.output.textLineLimit": 2000
+      }
+    }
+  },
+
+  "postCreateCommand": "dotnet --info && dotnet tool restore || true",
+  "postStartCommand": "dotnet --info >/dev/null 2>&1 || true"
+}
